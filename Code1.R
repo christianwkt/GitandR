@@ -65,7 +65,7 @@ names(df_offer)
 
 
 
-# Put all together --------------------------------------------------------
+# hhhhhPut all together --------------------------------------------------------
 
 
 donnée <- full_join(df_offer,df_comments , by = c("Cluster", "Criteria", "Comment"))
