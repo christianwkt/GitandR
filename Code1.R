@@ -16,6 +16,8 @@ df <- data.frame(ClusterGrp = c("Family"),
                  Cluster = c("cluster1"), 
                  Criteria = c("criteria1"), 
                  Comment = c("Comment_1"))
+
+
 View(df)
 
 df_offer <- map(companies, function(x){
@@ -65,8 +67,12 @@ names(df_offer)
 
 
 
-# 123Put all together --------------------------------------------------------
+# Put all together --------------------------------------------------------
 
 
 donnée <- full_join(df_offer,df_comments , by = c("Cluster", "Criteria", "Comment"))
+
 View(donnée)
+
+autodata <- donnée %>% select(company, Offer, Family,Cluster,Cluster_nlbe,Criteria,Criteria_nlbe,Comment,Comment_nlbe,Rating)
+View(autodata)
