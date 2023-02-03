@@ -1,5 +1,16 @@
-########################################################## HABITATION ########################################################
-##############################################################################################################################
+install.packages("tidyverse")
+install.packages("purrr")
+
+# Load packages
+
+library(dplyr)
+library(purrr)
+library(glue)
+library(readxl)
+
+
+##########################################################     AUTO   ####################################################################
+##########################################################################################################################################
 
 companies <- c("Allianz", "Axa","Ethias","Belfius")
 
@@ -23,16 +34,11 @@ names(df_offer)<-companies
 
 View(df_offer)
 
-# Section 1 ---------------------------------------------------------------
+# Section 1 ----------------------------------------------------------------------------------------------------------------------------------
 
 # Préparer les données du product tree
 
-# criteria1 <- read_excel("RefTables_Auto_24-01-2023.xlsx",sheet = "Criteria")
-# names(criteria1)[names(criteria1)=='Label']<-"Criteria"
-# names(criteria1)[names(criteria1)=='Label_nlbe']<-"Criteria_nlbe"
-# View(criteria1)
-
-comments <- read_excel("Tables_Auto_24-01.xlsx",sheet = "Comment")
+comments <- read_excel("Tables_Auto_24.xlsx",sheet = "Comment")
 
 names(comments)[names(comments)=='Label']<-"Comment"
 
